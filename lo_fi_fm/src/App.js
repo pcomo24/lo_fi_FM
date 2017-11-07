@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import StartButton from './StartButton';
 import './App.css';
 
-//have start button
-//onclick of start button change state of container div to show radio station components
-//click radio station to play
+//have radio button and tapes button
+//onClick of radio button shows live channels playing now
+//onClick of tapes button shows channels
+//once live channel or tape is selected bring up play/pause, rw, ff, skip
 
 
 function UserGreeting(props) {
