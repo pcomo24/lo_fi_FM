@@ -22,7 +22,8 @@ class App extends Component {
     this.state = {
       tapeButton: '',
       tapeIsHidden: true,
-      buttonsIsHidden: true
+      buttonsIsHidden: true,
+      testProps: 'props are being passed'
     }
   }
   onStartButtonClick(event) {
@@ -39,10 +40,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        {this.state.buttonsIsHidden && <StartButton buttonVar={this.state.tapeIsHidden}/>}
+        {this.state.buttonsIsHidden && <StartButton testProps={this.state.testProps}/>}
 
 
       </div>
