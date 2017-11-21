@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SourceButtons from './SourceButtons';
 import './App.css';
+import axios from 'axios';
 
 //on home page load show start button(power button)
 //on click of start button hide start button, render radio and tape button
@@ -31,10 +32,19 @@ class App extends Component {
     this.setState({
       buttonsIsHidden: !this.state.buttonsIsHidden,
     })
+    axios.get('https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyDfq9MeRdasqu6lRrKzP_be-HxdXejiICE&part=snippet,contentDetails,statistics,status')
+      .then(function(res) {
+        console.log(res)
+      })
+      .catch(function (error) {
+    console.log(error);
+  });
   }
   onStartButtonClick(event) {
     console.log('start button clicked!');
     console.log(event.target);
+    //axios request
+
   }
   onButtonClick() {
     console.log('tape button clicked!');
